@@ -6,6 +6,16 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from './global'
 
+const url_string = window.location.href;
+const  url = new URL(url_string);
+const  safeAddress = url.searchParams.get("safe");
+const opts = {
+  safeAddress,
+  chainId: 137
+}
+
+console.log(safeAddress)
+
 ReactDOM.render(
   <>
     <GlobalStyles />
